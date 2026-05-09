@@ -32,8 +32,7 @@ ingress:
   className: nginx
   annotations: {}
   hosts:
-    - host: 
-        hostname: python-app.test.com
+    - host: python-app.test.com
       paths:
         - path: /
           pathType: Prefix

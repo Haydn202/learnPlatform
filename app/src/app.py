@@ -7,14 +7,14 @@ import socket
 
 app = Flask(__name__)
 
-@app.route('/api/v1/details')
+@app.route('/api/v2/details')
 def details():
     return jsonify({
         'hostname': socket.gethostname(),
         'timestamp': datetime.datetime.now().isoformat()
     })
 
-@app.route('/api/v1/healthz')
+@app.route('/api/v2/healthz')
 def health():
     return jsonify({'status': 'OK'}), 200
 

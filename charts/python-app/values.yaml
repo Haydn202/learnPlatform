@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: haydn202/python-app
   pullPolicy: IfNotPresent
-  tag: 4e7279
+  tag: ${IMAGE_TAG}
 
 imagePullSecrets: []
 nameOverride: ""

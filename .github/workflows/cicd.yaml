@@ -35,11 +35,11 @@ jobs:
     runs-on: self-hosted
     needs: ci
     steps:
-      - name: install argocdCLI
+      - name: Install Argo CD CLI
         run: |
-          curl -ksSL -o argocd-linux-amd64 https://argocd-server.argocd/download/argocd-linux-amd64
-          chmod +x argocd-linux-amd64
-          sudo mv argocd-linux-amd64 /usr/local/bin/argocd
+          curl -fsSL -o argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+          chmod +x argocd
+          sudo mv argocd /usr/local/bin/argocd
 
       - name: ArgoCD Sync
         run: |

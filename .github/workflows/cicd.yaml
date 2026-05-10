@@ -37,10 +37,10 @@ jobs:
     steps:
       - name: install argocdCLI
         run: |
-          curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+          curl -ksSL -o argocd-linux-amd64 https://argocd-server.argocd/download/argocd-linux-amd64
           chmod +x argocd-linux-amd64
           sudo mv argocd-linux-amd64 /usr/local/bin/argocd
-          
+
       - name: ArgoCD Sync
         run: |
           argocd login argocd-server.argocd \

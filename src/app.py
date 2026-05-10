@@ -14,7 +14,6 @@ def details():
         'hostname': socket.gethostname(),
         'timestamp': datetime.datetime.now().isoformat(),
         'version': 'v2',
-        'runner': os.getenv('RUNNER_NAME'),
         'message': "Hello, World!"
     })
 

@@ -1,0 +1,11 @@
+# kubectl apply -f runnerdeploy.yaml -n actions-runner-system
+
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: self-hosted-runners
+spec:
+  replicas: 1
+  template:
+    spec:
+      repository: haydn202/learnPlatform

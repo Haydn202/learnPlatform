@@ -4,6 +4,7 @@
 from flask import Flask, jsonify
 import datetime
 import socket
+import os
 
 app = Flask(__name__)
 
@@ -12,7 +13,8 @@ def details():
     return jsonify({
         'hostname': socket.gethostname(),
         'timestamp': datetime.datetime.now().isoformat(),
-        'version': 'v2'
+        'version': 'v2',
+        'runner': os.getenv('RUNNER_NAME')
     })
 
 @app.route('/api/v2/healthz')
